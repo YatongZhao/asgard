@@ -5,9 +5,10 @@ services:
     ports:
       - "27017:27017"
   apiserver:
-    image: zyt76/node-server-container:v1
+    image: zyt76/node-server-container:v3
     volumes:
       - ./data/server:/usr/app
+      - ./data/server/interactive-book-server-koa:/usr/app/interactive-book-server-koa
     links:
       - mongo
     ports:
